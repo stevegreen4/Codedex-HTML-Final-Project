@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant Menu</title>
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            color: green;
+        }
+
+        #header-img {
+            width: 100px;
+            margin: 10px;
+        }
+
+        .navigation {
+            display: flex;
+        }
+
+        .navigation nav {
+            padding: 10px;
+        }
+
+        .drink-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .items {
+            flex: 1;
+        }
+
+        .items img {
+            width: 100px;
+            height: 150px;
+        }
+        .food-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://img.freepik.com/premium-vector/craft-beer-logo-vector-illustration-glass-emblem-dark-background_43582-51.jpg"
+            alt="Brewery Logo" id="header-img">
+        <h1>Green Beer Brewing</h1>
+        <div class="navigation">
+            <nav>Menu</nav>
+            <nav>Order Form</nav>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h2>Drink Menu</h2>
+            <section class="drink-menu">
+                <article class="items">
+                    <h3>Green Beer</h3>
+                    <img src="https://i5.walmartimages.com/seo/Star-Cutouts-SC2151-Green-Beer-Cardboard-Cutout_ead148ee-73e9-4d7f-a9b8-3d169d5517ed.ca6e7e8c172a23a901e8fcea91fa064a.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+                        alt="Green Beer">
+                    <p>
+                        Our namesake beer. Great on St. Patricks day, a random Wednesday, and every day in-between.
+                        Enjoy with our Corned Beef and Cabbage.
+                        <br> $5.00
+                    </p>
+                </article>
+
+                <article class="items">
+                    <h3>Dark Green Beer</h3>
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/71OtRcFPwmL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                        alt="Dark Beer">
+                    <p>
+                        A filling dark and deserty beer. Enjoyed best with our BBQ Ribs
+                        <br> $5.00
+                    </p>
+                </article>
+
+                <article class="items">
+                    <h3>Not Green Beer</h3>
+                    <img src="https://www.northernbrewer.com/cdn/shop/products/J01_4_x700.jpg?v=1580155095" alt="IPA">
+                    <p>
+                        A hoppy and refreshing IPA. Pairs well with our mozzarella sticks.
+                        <br> $5.00
+                    </p>
+                </article>
+
+            </section>
+        </div>
+
+        <div>
+            <h2>Food Menu</h2>
+            <section class="food-menu">
+                <article class="items">
+                    <h3>Corned Beef and Cabbage</h3>
+                    <img src="https://www.sipandfeast.com/wp-content/uploads/2023/03/corned-beef-cabbage-recipe-snippet-2.jpg" 
+                    alt="Corned Beef and Cabbage">
+                    <p>
+                        it wouldnt be a resturant with Green Beer if you didn't have an Irish staple. Served with your choice of 
+                        potato. <br> $15.99
+                    </p>
+                </article>
+
+                <article class="items">
+                    <h3>BBQ Ribs</h3>
+                    <img src="https://cdn11.bigcommerce.com/s-3xaaslonk2/images/stencil/960w/products/166/960/407__36424.1660073784.jpg?c=1" 
+                    alt="BBQ Ribs">
+                    <p>
+                        Our fall off the bone ribs will make your fingers messy and your stomach full. 
+                        <br> $20 for a half rack $25 for a full rack
+                    </p>
+                </article>
+
+                <article class="items">
+                    <h3>Mozzarella Sticks</h3>
+                    <img src="https://images.themodernproper.com/billowy-turkey/production/posts/2021/Homemade-Mozzarella-Sticks-9.jpeg?w=960&h=960&q=82&fm=jpg&fit=crop&dm=1638935116&s=2574b8da89d966ee167111e9822a0b4e" 
+                    alt="Mozzarella Sticks">
+                    <p>
+                        Deep fried cheese! What could be better. Enjoy it with our house made marinara sauce.
+                        <br> $5.00
+                    </p>
+                </article>
+            </section>
+        </div>
+
+        <section>
+            <h2>Place Your Order</h2>
+            <form>
+                <label for="food-item">What Do You Want to Eat/Drink?</label>
+                <select name="food-items" id="food-item">
+                    <option value="green-beer">Green Beer</option>
+                    <option value="dark-beer">Dark Green Beer</option>
+                    <option value="IPA">Not Green Beer</option>
+                    <option value="corned-beef">Corned Beef and Cabbage</option>
+                    <option value="ribs">BBQ Ribs</option>
+                    <option value="motz-sticks">Mozzarella Sticks</option>
+                </select>
+                <br><br>
+                <label for="quantity">Choose Quantity</label>
+                <input type="number" min="0" id="quantity">
+                <br><br>
+                <label for="sides">Choose one side</label>
+                <input type="radio" id="sides">Mozzarella Sticks
+                <input type="radio" id="sides">Fries
+                <input type="radio" id="sides">Side Salad
+                <input type="radio" id="sides">Mac and Cheese
+                <br><br>
+                <label for="special-requests">Do you have any special requests?</label>
+                <br>
+                <textarea name="requests" id="special-requests" cols="30" rows="10"></textarea>
+                <br><br>
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Made with love by Steve Green (greensteve58017623)
+        </p>
+    </footer>
+</body>
+
+</html>
